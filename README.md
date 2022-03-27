@@ -1,6 +1,8 @@
 # VSD_FPGA_Workshop
 FPGA - Fabric, Design and Architecture Workshop by VSD-IAT
 
+## Table of Contents
+
 - [Day 1](#day-1)
   * [Sub-heading](#sub-heading)
     + [Sub-sub-heading](#sub-sub-heading)
@@ -8,6 +10,12 @@ FPGA - Fabric, Design and Architecture Workshop by VSD-IAT
   * [Sub-heading](#sub-heading-1)
     + [Sub-sub-heading](#sub-sub-heading-1)
 - [Day 3](#day-3)
+  * [Sub-heading](#sub-heading-2)
+    + [Sub-sub-heading](#sub-sub-heading-2)
+- [Day 4](#day-4)
+  * [Sub-heading](#sub-heading-2)
+    + [Sub-sub-heading](#sub-sub-heading-2)
+- [Day 5](#day-5)
   * [Sub-heading](#sub-heading-2)
     + [Sub-sub-heading](#sub-sub-heading-2)
 
@@ -54,6 +62,30 @@ This is an h2 heading
 
 This is an h3 heading
 
+## Day 4
+
+This is an h1 heading
+
+### Sub-heading
+
+This is an h2 heading
+
+#### Sub-sub-heading
+
+This is an h3 heading
+
+## Day 5
+
+This is an h1 heading
+
+### Sub-heading
+
+This is an h2 heading
+
+#### Sub-sub-heading
+
+This is an h3 heading
+
 ## Table of Contents
 
 ### Day 1
@@ -84,14 +116,3 @@ This is an h3 heading
 2. Characterize RVmyth in terms of performance and area
 3. Steps to generate rvmyth post-implementation netlist
 4. Confirm RVmyth on SOFA behavioral simulation using Vivado
-
-
-## Day 1 - 
-
-## Day 2 - 
-
-## Day 3 - 
-
-## Day 4 - 
-
-## Day 5 - 
