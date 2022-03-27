@@ -3,8 +3,25 @@ FPGA - Fabric, Design and Architecture Workshop by VSD-IAT
 
 ## Table of Contents
 
+# Chapter one
+some text
+
+# Chapter two
+some text in chapter two
+
+## Chapter two dot one
+and so on
+
+## Chapter two dot three
+
+### Chapter two dot three dot one
+
+# Chapter three
+
+# Chapter four
+
 ### Day 1: 
-[1. Introduction to FPGA] (## Day 1 -)
+1. Introduction to FPGA ## Day 1 -
 2. Counter example using Vivado
 3. Counter Verilog explanation and implementation using Vivado
 4. Vivado timing, power, and area measurement for counter
