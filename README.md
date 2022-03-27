@@ -20,7 +20,7 @@ and so on
 
 # Chapter four
 
-### [Day 1](## Day 1 -)
+### [Day 1](#Day 1 -)
 1. Introduction to FPGA
 2. Counter example using Vivado
 3. Counter Verilog explanation and implementation using Vivado
