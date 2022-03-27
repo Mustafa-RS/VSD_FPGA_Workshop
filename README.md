@@ -1,26 +1,62 @@
 # VSD_FPGA_Workshop
 FPGA - Fabric, Design and Architecture Workshop by VSD-IAT
 
+- [Heading](#heading)
+  * [Sub-heading](#sub-heading)
+    + [Sub-sub-heading](#sub-sub-heading)
+- [Heading](#heading-1)
+  * [Sub-heading](#sub-heading-1)
+    + [Sub-sub-heading](#sub-sub-heading-1)
+- [Heading](#heading-2)
+  * [Sub-heading](#sub-heading-2)
+    + [Sub-sub-heading](#sub-sub-heading-2)
+
+
+# Heading levels
+
+> This is a fixture to test heading levels
+
+<!-- toc -->
+
+## Heading
+
+This is an h1 heading
+
+### Sub-heading
+
+This is an h2 heading
+
+#### Sub-sub-heading
+
+This is an h3 heading
+
+## Heading
+
+This is an h1 heading
+
+### Sub-heading
+
+This is an h2 heading
+
+#### Sub-sub-heading
+
+This is an h3 heading
+
+## Heading
+
+This is an h1 heading
+
+### Sub-heading
+
+This is an h2 heading
+
+#### Sub-sub-heading
+
+This is an h3 heading
+
 ## Table of Contents
 
-# [Chapter one](#chapter-one)
-some text
-
-# Chapter two
-some text in chapter two
-
-## Chapter two dot one
-and so on
-
-## Chapter two dot three
-
-### Chapter two dot three dot one
-
-# Chapter three
-
-# Chapter four
-
-### [Day 1](#Day 1 -)
+### Day 1
 1. Introduction to FPGA
 2. Counter example using Vivado
 3. Counter Verilog explanation and implementation using Vivado
@@ -59,5 +95,3 @@ and so on
 ## Day 4 - 
 
 ## Day 5 - 
-
-Chapter one
