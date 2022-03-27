@@ -5,9 +5,10 @@ FPGA - Fabric, Design and Architecture Workshop by VSD-IAT
 
 - [Day 1](#day-1)
   1. [Introduction to FPGA](#introduction-to-fpga)
-  2. f
-  3. f
-  4. f
+  2. [Counter example using Vivado](counter-example-using-vivado)
+  3. [Counter Verilog explanation and implementation using Vivado](counter-verilog-explanation-and-implementation-using-vivado)
+  4. [Vivado timing, power, and area measurement for counter](vivado-timing,-power,-and-area-measurement-for-counter)
+  5. [Introduction to VIO](introduction-to-vio)
     + [Sub-sub-heading](#sub-sub-heading)
 - [Day 2](#day-2)
   * [Sub-heading](#sub-heading-1)
@@ -36,6 +37,14 @@ This is an h1 heading
 ### Introduction to FPGA
 
 This is an h2 heading
+
+### Counter example using Vivado
+
+### Counter Verilog explanation and implementation using Vivado
+
+### Vivado timing, power, and area measurement for counter
+
+### Introduction to VIO
 
 #### Sub-sub-heading
 
