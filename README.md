@@ -4,7 +4,7 @@ FPGA - Fabric, Design and Architecture Workshop by VSD-IAT
 ## Table of Contents
 
 ### Day 1: 
-1. Introduction to FPGA
+[1. Introduction to FPGA] (## Day 1 -)
 2. Counter example using Vivado
 3. Counter Verilog explanation and implementation using Vivado
 4. Vivado timing, power, and area measurement for counter
