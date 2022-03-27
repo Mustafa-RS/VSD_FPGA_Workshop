@@ -31,3 +31,14 @@ FPGA - Fabric, Design and Architecture Workshop by VSD-IAT
 2. Characterize RVmyth in terms of performance and area
 3. Steps to generate rvmyth post-implementation netlist
 4. Confirm RVmyth on SOFA behavioral simulation using Vivado
+
+
+## Day 1 - 
+
+## Day 2 - 
+
+## Day 3 - 
+
+## Day 4 - 
+
+## Day 5 - 
