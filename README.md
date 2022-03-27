@@ -1,13 +1,13 @@
 # VSD_FPGA_Workshop
 FPGA - Fabric, Design and Architecture Workshop by VSD-IAT
 
-- [Heading](#day-1)
+- [Day 1](#day-1)
   * [Sub-heading](#sub-heading)
     + [Sub-sub-heading](#sub-sub-heading)
-- [Heading](#heading-1)
+- [Day 2](#day-2)
   * [Sub-heading](#sub-heading-1)
     + [Sub-sub-heading](#sub-sub-heading-1)
-- [Heading](#heading-2)
+- [Day 3](#day-3)
   * [Sub-heading](#sub-heading-2)
     + [Sub-sub-heading](#sub-sub-heading-2)
 
@@ -30,7 +30,7 @@ This is an h2 heading
 
 This is an h3 heading
 
-## Heading
+## Day 2
 
 This is an h1 heading
 
@@ -42,7 +42,7 @@ This is an h2 heading
 
 This is an h3 heading
 
-## Heading
+## Day 3
 
 This is an h1 heading
 
