@@ -11,7 +11,9 @@ FPGA - Fabric, Design and Architecture Workshop by VSD-IAT
   5. [Introduction to VIO](#introduction-to-vio)
     + [Sub-sub-heading](#sub-sub-heading)
 - [Day 2](#day-2)
-  * [Sub-heading](#sub-heading-1)
+  1. [Introduction to OpenFPGA and VTR (verilog-to-routing)](#introduction-to-openfpga-and-vtr-(verilog-to-routing))
+  2. [Introduction to VPR (versatile-place-and-route) using basic Earch fabric]()
+  3. [Counter example using VPR/VTR openfpga flow]()
     + [Sub-sub-heading](#sub-sub-heading-1)
 - [Day 3](#day-3)
   * [Sub-heading](#sub-heading-2)
@@ -22,13 +24,6 @@ FPGA - Fabric, Design and Architecture Workshop by VSD-IAT
 - [Day 5](#day-5)
   * [Sub-heading](#sub-heading-2)
     + [Sub-sub-heading](#sub-sub-heading-2)
-
-
-# Heading levels
-
-> This is a fixture to test heading levels
-
-<!-- toc -->
 
 ## Day 1
 
@@ -54,7 +49,7 @@ This is an h3 heading
 
 This is an h1 heading
 
-### Sub-heading
+### Introduction to OpenFPGA and VTR (verilog-to-routing)
 
 This is an h2 heading
 
