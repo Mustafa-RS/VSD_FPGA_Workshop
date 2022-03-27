@@ -3,7 +3,7 @@ FPGA - Fabric, Design and Architecture Workshop by VSD-IAT
 
 ## Table of Contents
 
-# [Chapter one] (www.nyu.com)
+# [Chapter one](www.nyu.com)
 some text
 
 # Chapter two
