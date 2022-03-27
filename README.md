@@ -1,7 +1,7 @@
 # VSD_FPGA_Workshop
 FPGA - Fabric, Design and Architecture Workshop by VSD-IAT
 
-- [Heading](#heading)
+- [Heading](#day-1)
   * [Sub-heading](#sub-heading)
     + [Sub-sub-heading](#sub-sub-heading)
 - [Heading](#heading-1)
@@ -18,7 +18,7 @@ FPGA - Fabric, Design and Architecture Workshop by VSD-IAT
 
 <!-- toc -->
 
-## Heading
+## Day 1
 
 This is an h1 heading
 
