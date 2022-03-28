@@ -9,7 +9,7 @@ FPGA - Fabric, Design and Architecture Workshop by VSD-IAT
   3. [Counter Verilog explanation and implementation using Vivado](#counter-verilog-explanation-and-implementation-using-vivado)
   4. [Vivado timing power and area measurement for counter](#vivado-timing-power-and-area-measurement-for-counter)
   5. [Introduction to VIO](#introduction-to-vio)
-    + [Sub-sub-heading](#sub-sub-heading)
+
 - [Day 2](#day-2)
   1. [Introduction to OpenFPGA and VTR (verilog-to-routing)](#introduction-to-openfpga-and-vtr-verilog-to-routing)
   2. [Introduction to VPR (versatile-place-and-route) using basic Earch fabric](#introduction-to-vpr-versatile-place-and-route-using-basic-earch-fabric)
