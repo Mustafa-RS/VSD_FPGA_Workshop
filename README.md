@@ -88,11 +88,11 @@ Upong launching the Vivado software, we create a new project & then since we alr
 
 ### Counter Verilog explanation and implementation using Vivado
 
-Vivado map pins
+#### Vivado mapping pins
 
-Vivado lets us choose pins and autimatically creates the constraints file. 
+Vivado lets us choose which I/O we want to map to the FPGAs physical pins, once we do so Vivado autimatically creates the constraints file. 
 
-<see pic for reference>
+![Mapping Pins](Pictures/Day1/Mapping_pins.PNG)
   
 #### Vivado Synthesis
 
