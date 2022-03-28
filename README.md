@@ -146,7 +146,7 @@ VIO standards for Virtual Input/Output & it is an IP built in the Vivado Softwar
   
 VIO is not a key feature of the Vivado software, however it can very useful for users who do not have access the physical FPGA which they want to design on yet. (Like me!). VIO will allow us to program a design such as the 4 bit counter in the same way we would if we had access to a physical board. On the vivado software VIO will allow us to manipulate inputs to the counter, like the reset pin & it will also show us the 4 digit output in real-time. 
   
-![VIO](/Pictures/Day 1/VIO.png)
+![VIO](/Pictures/Day1/VIO.png)
   
 The Professor's labeled diagram below clearly helped me understand how VIO worked. The reset from VIO is considered a replacement for a switch on the physical FPGA, therefore it is an input of the design, at the same time it is an OUTPUT of the VIO! The same relationship can be applied to the design outputs, because they need to be probed for us to see their state, they are in fact INPUTS of the VIO!
 
