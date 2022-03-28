@@ -96,9 +96,9 @@ Vivado lets us choose pins and autimatically creates the constraints file.
   
 #### Vivado Synthesis
 
-![Simulation 1](/Pictures/Day1/Simulation 1.PNG)
-![Simulation 2](/Pictures/Day1/Simulation 2.PNG)
-![Simulation 3](/Pictures/Day1/Simulation 3 - Div CLK.PNG)
+![Simulation 1](/Pictures/Day1/Simulation-1.PNG)
+![Simulation 2](/Pictures/Day1/Simulation-2.PNG)
+![Simulation 3](/Pictures/Day1/Simulation-3---Div-CLK.PNG)
 
 Once synthesis is completed, let's open the synthesized design. We get the following reports
 - timing summary 
