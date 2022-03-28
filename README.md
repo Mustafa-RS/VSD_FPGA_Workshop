@@ -11,9 +11,9 @@ FPGA - Fabric, Design and Architecture Workshop by VSD-IAT
   5. [Introduction to VIO](#introduction-to-vio)
     + [Sub-sub-heading](#sub-sub-heading)
 - [Day 2](#day-2)
-  1. [Introduction to OpenFPGA and VTR (verilog-to-routing)](#introduction-to-openfpga-and-vtr-(verilog-to-routing))
-  2. [Introduction to VPR (versatile-place-and-route) using basic Earch fabric](#introduction-to-vpr-(versatile-place-and-route)-using-basic-earch-fabric)
-  3. [Counter example using VPR/VTR openfpga flow](#counter-example-using-vpr/vtr-openfpga-flow)
+  1. [Introduction to OpenFPGA and VTR (verilog-to-routing)](#introduction-to-openfpga-and-vtr-verilog-to-routing)
+  2. [Introduction to VPR (versatile-place-and-route) using basic Earch fabric](#introduction-to-vpr-versatile-place-and-route-using-basic-earch-fabric)
+  3. [Counter example using VPR/VTR openfpga flow](#counter-example-using-vpr-and-vtr-openfpga-flow)
     + [Sub-sub-heading](#sub-sub-heading-1)
 - [Day 3](#day-3)
   * [Sub-heading](#sub-heading-2)
@@ -49,15 +49,15 @@ This is an h3 heading
 
 This is an h1 heading
 
-### Introduction to OpenFPGA and VTR (verilog-to-routing)
+### Introduction to OpenFPGA and VTR verilog-to-routing
 
 This is an h2 heading
 
-### Introduction to VPR (versatile-place-and-route) using basic Earch fabric
+### Introduction to VPR versatile-place-and-route using basic Earch fabric
 
 This is an h3 heading
 
-### Counter example using VPR/VTR openfpga flow
+### Counter example using VPR and VTR openfpga flow
 
 ## Day 3
 
