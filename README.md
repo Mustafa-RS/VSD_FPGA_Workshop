@@ -53,11 +53,11 @@ This is an h1 heading
 
 This is an h2 heading
 
-#### Introduction to VPR (versatile-place-and-route) using basic Earch fabric
+### Introduction to VPR (versatile-place-and-route) using basic Earch fabric
 
 This is an h3 heading
 
-#### Counter example using VPR/VTR openfpga flow
+### Counter example using VPR/VTR openfpga flow
 
 ## Day 3
 
