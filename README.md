@@ -78,17 +78,9 @@ FPGAs also have Block RAM, Clock tiles, DSP blocks, multiplier blocks which can 
 
 ### Counter example using Vivado
 
-Vivado Counter 
+Our first digital design on vivado was a 4 bit up counter. It is designed to be mapped to 4 consecutive LEDS on the Baysy3 FPGA.  
 
-Vivado-Verilog explanation
-
-We start with a 4 bit up counter. It will be mapped to 4 LEDs. 
-
-Let's launch vivado, -/vivado
-
-On vivado when a file shows 3 dots, that means it's the top module!
-
-Now we are ready to run;
+Upong launching the Vivado software, we create a new project & then since we already had a design file, we can insert it to the project by cling the "+" icon. Once we insert the counter.v file, we can see that it exhibits a 3 dot symbol, indicating it is our top module. Once we insert the test bench file counter_tb.v we are ready to run;
  - Simulation
  - Elaboration
  - Synthesis
@@ -102,11 +94,11 @@ Vivado lets us choose pins and autimatically creates the constraints file.
 
 <see pic for reference>
   
-Vivado Synthesis
+#### Vivado Synthesis
 
-Click run synthesis, then max number of jobs that will run at the same time. then hit okay. 
-  
-Vivado summary
+![Simulation 1](/Pictures/Day1/Simulation-1.PNG)
+![Simulation 2](/Pictures/Day1/Simulation-2.PNG)
+![Simulation 3](/Pictures/Day1/Simulation-3---Div-CLK.PNG)
 
 Once synthesis is completed, let's open the synthesized design. We get the following reports
 - timing summary 
@@ -146,9 +138,9 @@ VIO standards for Virtual Input/Output & it is an IP built in the Vivado Softwar
   
 VIO is not a key feature of the Vivado software, however it can very useful for users who do not have access the physical FPGA which they want to design on yet. (Like me!). VIO will allow us to program a design such as the 4 bit counter in the same way we would if we had access to a physical board. On the vivado software VIO will allow us to manipulate inputs to the counter, like the reset pin & it will also show us the 4 digit output in real-time. 
   
-![VIO](/Pictures/Day 1/VIO.png)
+![VIO](/Pictures/Day1/VIO.PNG)
   
-The Professor's labeled diagram below clearly helped me understand how VIO worked. The reset from VIO is considered a replacement for a switch on the physical FPGA, therefore it is an input of the design, at the same time it is an OUTPUT of the VIO! The same relationship can be applied to the design outputs, because they need to be probed for us to see their state, they are in fact INPUTS of the VIO!
+The Professor's labeled diagram above clearly showed me  how VIO works. The reset from VIO is considered a replacement for a switch on the physical FPGA, therefore it is an input of the design, at the same time it is an OUTPUT of the VIO! The same relationship can be applied to the design outputs, because they need to be probed for us to see their state, they are in fact INPUTS of the VIO!
 
 ## Day 2
 
