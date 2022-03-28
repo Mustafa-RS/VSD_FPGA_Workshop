@@ -91,6 +91,70 @@ FPGAs also have Block RAM, Clock tiles, DSP blocks, multiplier blocks which can 
 
 ### Counter example using Vivado
 
+Vivado Counter 
+
+Vivado-Verilog explanation
+
+We start with a 4 bit up counter. It will be mapped to 4 LEDs. 
+
+Let's launch vivado, -/vivado
+
+On vivado when a file shows 3 dots, that means it's the top module!
+
+Now we are ready to run;
+ - Simulation
+ - Elaboration
+ - Synthesis
+ - Implementation
+
+
+
+Vivado map pins
+
+Vivado lets us choose pins and autimatically creates the constraints file. 
+
+<see pic for reference>
+
+Theory slack
+
+
+
+Vivado Synthesis
+
+Click run synthesis, then max number of jobs that will run at the same time. then hit okay. 
+
+Once synthesis is completed, let's open the synthesized design. We get the following reports
+- timing summary 
+- clock networks
+- power
+- etc. 
+
+the Timing summary says, "No timing constraints.." because we didnt set clk frequency or delays in the constraints file!!
+
+
+Constraints to bitstream
+
+We can set constraints using constrants wizard, it will autimatically show name of clock pin, says its undefined.
+
+We click undefned and replace it with 100MHz. 
+
+On the bottom it will show the respctive command for this. It adds this command to the constraints file, we can see it in the text editor window. 
+
+We now RE-run synthesis, now the timing summary shows the that the timing constraints are met!!
+
+Implementation step, when com
+
+Generate bitsream, when its done it will say bitsream gen is complete. 
+
+
+Vivado timing
+
+
+Vivado slack, power, area
+
+
+Vivado summary
+
 ### Counter Verilog explanation and implementation using Vivado
 
 ### Vivado timing, power, and area measurement for counter
