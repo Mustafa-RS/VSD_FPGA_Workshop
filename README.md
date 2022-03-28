@@ -108,27 +108,20 @@ Once synthesis is completed, let's open the synthesized design. We get the follo
 
 ### Vivado timing, power, and area measurement for counter
   
-the Timing summary says, "No timing constraints.." because we didnt set clk frequency or delays in the constraints file!!
+After running synthesis, Vivado's Timing Summary gives the output message "No timing constraints". This is because we didnt set clk frequency or delays in the constraints file! After we do this, then the Timing Summary shows the time it takes for data to pass through the design. This is further explained in the lectures as Theory Slack. 
 
-Constraints to bitstream
+![Slack](/Pictures/Day1/Slack.PNG)
 
-We can set constraints using constrants wizard, it will autimatically show name of clock pin, says its undefined.
+In order for us to create a bitstream we must have a positive slack, and in order to have a positive slack, we must set out timing constraints.
 
-We click undefned and replace it with 100MHz. 
-
+We can set constraints using constrants wizard, it will autimatically show the name of clock pin, says its undefined. We click undefned and replace it with 100MHz. 
 On the bottom it will show the respctive command for this. It adds this command to the constraints file, we can see it in the text editor window. 
 
-We now RE-run synthesis, now the timing summary shows the that the timing constraints are met!!
+We now RE-run synthesis, now the timing summary shows the that the timing constraints are met!
 
-Implementation step, when com
+Now we can run the Implementation step, it uses the synthesized files and implements them with regards to our target FPGA's architecture. In addition to timing reports, we also have access to power & area statistics as well through Vivado once we do Implementation. 
 
-Generate bitsream, when its done it will say bitsream gen is complete. 
-  
-Theory slack
-  
-Vivado timing
-
-Vivado slack, power, area
+The last step is to generate bitsream, when its done it will say bitsream gen is complete and then if I had a physical board, I would have connected it to the PC now with USB cable for flashing the bitsream.  
 
 ### Introduction to VIO
 
@@ -144,7 +137,7 @@ The Professor's labeled diagram above clearly showed me  how VIO works. The rese
 
 ## Day 2
 
-PLEASE WRITE 2-3 sentences to sum up the mess below.
+The second day of the FPGA workshop began by introducing OpenFPGA & how anyone can use it to produce FPGA fabric. We got to see the overall OpenFPGA tool flow, including VTR (verilog to routing) which represents a large portion of the flow we will be using on the OpenFPGA framwork. VTR is also split into different steps, different 3rd parties have developed these steps seperately e.g. UC Berkely who have made ABC. Day 2 was very heavy on details, we studied different file types, all of which play a part in using OpenFPGA. Lastly we used the VTR & VPR flows ourselves understand how the OpenFPGA leverages them in the framework. 
 
 ### Introduction to OpenFPGA and VTR verilog-to-routing
 
