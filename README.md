@@ -137,52 +137,42 @@ The Professor's labeled diagram above clearly showed me  how VIO works. The rese
 
 ## Day 2
 
-The second day of the FPGA workshop began by introducing OpenFPGA & how anyone can use it to produce FPGA fabric. We got to see the overall OpenFPGA tool flow, including VTR (verilog to routing) which represents a large portion of the flow we will be using on the OpenFPGA framwork. VTR is also split into different steps, different 3rd parties have developed these steps seperately e.g. UC Berkely who have made ABC. Day 2 was very heavy on details, we studied different file types, all of which play a part in using OpenFPGA. Lastly we used the VTR & VPR flows ourselves understand how the OpenFPGA leverages them in the framework. 
+The second day of the FPGA workshop began by introducing OpenFPGA & how anyone can use it to produce FPGA fabric. We got to see the overall OpenFPGA tool flow, including VTR (verilog to routing) which represents a large portion of the flow we will be using on the OpenFPGA framwork. VTR is also split into different steps, different 3rd parties have developed these steps seperately e.g. UC Berkely who have made ABC. Day 2 was very heavy on details, we studied different file types, all of which play a part in using OpenFPGA. Lastly we used the VTR & VPR flows ourselves to understand how  OpenFPGA leverages them in the framework. 
 
 ### Introduction to OpenFPGA and VTR verilog-to-routing
 
-What is OpenFPGA?? - Xifan's project owned by Uof Utah lol, what really is it though?
+#### What is OpenFPGA? 
+For someone working at Rapid Silicon we know it is Xifan's project owned by University of Utah, but what really is it though?
 
-Currently there are certain methodologies required to produce FPGA fabric, involves several HW & SW engineers & the design cycle lasts several months. 
+Currently there are certain methodologies required to produce FPGA fabric, they rely upon  several HW & SW engineers & very long design cycle lasting several months. 
+Dr. Xifan Tang & his colleagues wanted to improve this methodology so that one can produce FPGA fabric without significant resources and in less time. OpenFPGA made it possible for "CUSTOM" FPGA fabric to be designed in 24 hours!
 
-Xifan wanted to improve this methodology so that one can produce FPGA fabric without all those resources and in less time. In 24 hours "CUSTOM" FPGA fabric could be designed. 
-
-Why do we need customer FPGAs?
+#### Why do we need custome FPGAs?
 Well for domain-specific applications, there isn't always an off the shelf solution & you might not want to use an ASIC so in this case an FPGA that just about accomplishes your personal application's needs is ideal. It will save money on resources that you will not be using. 
 
-Domain specific applications include 
+#### Domain specific applications include; 
 - DSP
 - Video/Image processing 
 These applications can be accelerated when using FPGA instead of MCU. 
 
-Producing custom FPGAs are normally costly & time-consuming, that's what makes OpenFPGA so powerful. It has 20+ architecture templates in xml files which are optimized for different applications. In addition OpenFPGA allows users to write their own architecture using the architecture description language based on xml files. 
-
-OpenFPGA uses the xml files to then generate Verilog netlists which will describe the FPGA fabric. It also autimatically generates Verilog testbenches to validate the fabric. (LUTs, Flip-flops, MUXs, etc. CLBs as well all are part of the fabric.)
+Producing custom FPGAs are normally costly & time-consuming, that's what makes OpenFPGA so powerful. It has 20+ architecture templates in xml files that are optimized for different applications. In addition OpenFPGA allows users to write their own architecture using the architecture description language based on xml. OpenFPGA uses the xml files to then generate Verilog netlists which will describe the FPGA fabric. It also autimatically generates Verilog testbenches to validate the fabric. (LUTs, Flip-flops, MUXs, etc. CLBs as well all are part of the fabric.)
 
 Lastly OpenFPGA will generate bitsream using the sme xml based description file.
 
-OpenFPGA can generate the following files formats
-FPGA-Verilog
-FPGA-SDC
-FPGA-Bitsream
-FPGA-SPICE
+OpenFPGA can generate the following files formats;
+- FPGA-Verilog
+- FPGA-SDC
+- FPGA-Bitsream
+- FPGA-SPICE
 
-
-We will use RTL and go through VTR flow, 
-map design to XML, 
-then goes through VPR, which gives us Verilog files
-These files go through Fabric generator to output fabric netlists. As well as Testbench generator to output full testbench for validation.
+We will use RTL and go through VTR flow, map design to XML, then goes through VPR, which gives us Verilog files. These files go through Fabric generator to output fabric netlists. As well as Testbench generator to output full testbench for validation.
 
 <inset picture for ref>
 
-The XML files allow us to define all parts of an FPGA's fabric, such as CLBs, MUX in the form of code. This archietecuture langauage based on XML allows the user to also design their own architecture to add to the 20+ templates available. (I guess Lex is helping Xifan do that now).
+The XML files allow us to define all parts of an FPGA's fabric, such as CLBs, MUX in the form of code. This archietecuture langauage based on XML allows the user to also design their own architecture to add to the 20+ templates available. In order for the XML files to be translated to FPGA architecture, we have to use VTR (Verilog to Routing). https://docs.verilogtorouting.org/en/latest/quickstart/
+  
 
-We have to use VTR (Verilog to Routing) in order for the XML files to be translated to FPGA architecture. 
-
-https://docs.verilogtorouting.org/en/latest/quickstart/
-
-VTR Flow:
-
+#### VTR Flow 
 Consists of 3 different tools
 
 VTR Requires 2 inputs;
