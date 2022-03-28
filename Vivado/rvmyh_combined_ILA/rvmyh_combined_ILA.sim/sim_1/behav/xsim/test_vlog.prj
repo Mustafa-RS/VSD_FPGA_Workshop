@@ -1,0 +1,10 @@
+# compile verilog/system verilog design source files
+verilog xil_defaultlib  \
+"../../../../rvmyh_combined_ILA.srcs/sources_1/imports/Day3/mythcore_test_no_ILA.v" \
+"../../../../rvmyh_combined_ILA.srcs/sim_1/imports/Day3/test.v" \
+
+# compile glbl module
+verilog xil_defaultlib "glbl.v"
+
+# Do not sort compile order
+nosort

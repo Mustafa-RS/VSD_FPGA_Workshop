@@ -1,0 +1,77 @@
+Placement_File: counter.pre-vpr.place Placement_ID: SHA256:e3b1851cc20e2951a2c041949c5bbb1b1f8b3d7b673ed94e21818e105a3b4997
+Array size: 3 x 3 logic blocks.
+
+Routing:
+
+Net 0 (up_counter^reset)
+
+Node:	19	SOURCE (0,1)  Pad: 19  Switch: 0
+Node:	43	  OPIN (0,1)  Pad: 19  Switch: 2
+Node:	561	 CHANY (0,1)  Track: 67  Switch: 1
+Node:	134	  IPIN (1,1)  Pin: 11   clb.I1[11] Switch: 0
+Node:	96	  SINK (1,1)  Class: 0  Switch: -1 Net_pin_index: 1
+
+
+Net 1 (up_counter^enable)
+
+Node:	253	SOURCE (2,1)  Pad: 7  Switch: 0
+Node:	277	  OPIN (2,1)  Pad: 7  Switch: 2
+Node:	666	 CHANY (1,1)  Track: 72  Switch: 1
+Node:	152	  IPIN (1,1)  Pin: 29   clb.I3[3] Switch: 0
+Node:	98	  SINK (1,1)  Class: 2  Switch: -1 Net_pin_index: 2
+Node:	666	 CHANY (1,1)  Track: 72  Switch: 1
+Node:	124	  IPIN (1,1)  Pin: 1   clb.I1[1] Switch: 0
+Node:	96	  SINK (1,1)  Class: 0  Switch: -1 Net_pin_index: 1
+
+
+Net 2 (up_counter^out~3)
+
+Node:	107	SOURCE (1,1)  Class: 11  Switch: 0
+Node:	182	  OPIN (1,1)  Pin: 59   clb.O[6] Switch: 2
+Node:	589	 CHANY (0,1)  Track: 95  Switch: 2
+Node:	390	 CHANX (1,0)  Track: 96  Switch: 2
+Node:	598	 CHANY (1,1)  Track: 4  Switch: 1
+Node:	279	  IPIN (2,1)  Pad: 9  Switch: 0
+Node:	255	  SINK (2,1)  Pad: 9  Switch: -1 Net_pin_index: 1
+
+
+Net 3 (up_counter^out~2)
+
+Node:	108	SOURCE (1,1)  Class: 12  Switch: 0
+Node:	183	  OPIN (1,1)  Pin: 60   clb.O[7] Switch: 2
+Node:	404	 CHANX (1,1)  Track: 10  Switch: 2
+Node:	603	 CHANY (1,1)  Track: 9  Switch: 2
+Node:	387	 CHANX (1,0)  Track: 93  Switch: 2
+Node:	584	 CHANY (0,1)  Track: 90  Switch: 1
+Node:	27	  IPIN (0,1)  Pad: 3  Switch: 0
+Node:	3	  SINK (0,1)  Pad: 3  Switch: -1 Net_pin_index: 1
+
+
+Net 4 (up_counter^out~0)
+
+Node:	116	SOURCE (1,1)  Class: 20  Switch: 0
+Node:	191	  OPIN (1,1)  Pin: 68   clb.O[15] Switch: 2
+Node:	432	 CHANX (1,1)  Track: 38  Switch: 2
+Node:	631	 CHANY (1,1)  Track: 37  Switch: 1
+Node:	288	  IPIN (2,1)  Pad: 18  Switch: 0
+Node:	264	  SINK (2,1)  Pad: 18  Switch: -1 Net_pin_index: 1
+
+
+Net 5 (up_counter^out~1)
+
+Node:	117	SOURCE (1,1)  Class: 21  Switch: 0
+Node:	192	  OPIN (1,1)  Pin: 69   clb.O[16] Switch: 2
+Node:	642	 CHANY (1,1)  Track: 48  Switch: 2
+Node:	445	 CHANX (1,1)  Track: 51  Switch: 2
+Node:	541	 CHANY (0,1)  Track: 47  Switch: 2
+Node:	342	 CHANX (1,0)  Track: 48  Switch: 2
+Node:	646	 CHANY (1,1)  Track: 52  Switch: 2
+Node:	449	 CHANX (1,1)  Track: 55  Switch: 1
+Node:	237	  IPIN (1,2)  Pad: 15  Switch: 0
+Node:	213	  SINK (1,2)  Pad: 15  Switch: -1 Net_pin_index: 1
+
+
+Net 6 (up_counter_clk): global net connecting:
+
+Block up_counter_clk (#6) at (0,1), Pin class 16.
+Block up_counter^ADD~4-0[0] (#0) at (1,1), Pin class 26.

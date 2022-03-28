@@ -1,0 +1,11 @@
+Vivado Simulator 2019.2
+Copyright 1986-1999, 2001-2019 Xilinx, Inc. All Rights Reserved.
+Running: C:/Xilinx/Vivado/2019.2/bin/unwrapped/win64.o/xelab.exe -wto 4eb213b38d1a40ba927db8bd02c775ed --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot upcounter_testbench_behav xil_defaultlib.upcounter_testbench xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Pass Through NonSizing Optimizer
+ERROR: [VRFC 10-3180] cannot find port 'clock' on this module [C:/Users/musta/Documents/Vivado/Counter/Counter.srcs/sources_1/imports/Up_Counter/up_counter_post_synthesis.v:346]
+ERROR: [VRFC 10-3180] cannot find port 'clock' on this module [C:/Users/musta/Documents/Vivado/Counter/Counter.srcs/sources_1/imports/Up_Counter/up_counter_post_synthesis.v:367]
+ERROR: [VRFC 10-3180] cannot find port 'clock' on this module [C:/Users/musta/Documents/Vivado/Counter/Counter.srcs/sources_1/imports/Up_Counter/up_counter_post_synthesis.v:388]
+ERROR: [VRFC 10-3180] cannot find port 'clock' on this module [C:/Users/musta/Documents/Vivado/Counter/Counter.srcs/sources_1/imports/Up_Counter/up_counter_post_synthesis.v:409]
+ERROR: [XSIM 43-3322] Static elaboration of top level Verilog design unit(s) in library work failed.

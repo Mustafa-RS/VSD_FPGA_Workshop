@@ -1,0 +1,11 @@
+# compile verilog/system verilog design source files
+verilog xil_defaultlib  \
+"../../../../Up_Counter.srcs/sources_1/imports/post_impl_files_for_reference/primitives.v" \
+"../../../../Up_Counter.srcs/sources_1/imports/post_impl_files_for_reference/up_counter_post_synthesis.v" \
+"../../../../Up_Counter.srcs/sim_1/imports/post_impl_files_for_reference/counter_tb.v" \
+
+# compile glbl module
+verilog xil_defaultlib "glbl.v"
+
+# Do not sort compile order
+nosort
