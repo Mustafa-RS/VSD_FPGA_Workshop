@@ -27,10 +27,10 @@ FPGA - Fabric, Design and Architecture Workshop by VSD-IAT
   4. [Post-implementation netlist and simulation using SOFA](#post-implementation-netlist-and-simulation-using-sofa)
     + [Sub-sub-heading](#sub-sub-heading-2)
 - [Day 5](#day-5)
-  1. [Steps to run RISC-V Core - on SOFA]
-  2. [Characterize RVmyth in terms of performance and area]
-  3. [Steps to generate rvmyth post-implementation netlist]
-  4. [Confirm RVmyth on SOFA behavioral simulation using Vivado]
+  1. [Steps to run RISC-V Core - on SOFA](#steps-to-run-risc-v-core-on-sofa)
+  2. [Characterize RVmyth in terms of performance and area](#characterize-rvmyth-in-terms-of-performance-and-area)
+  3. [Steps to generate rvmyth post-implementation netlist](#steps-to-generate-rvmyth-post-implementation-netlist）
+  4. [Confirm RVmyth on SOFA behavioral simulation using Vivado](#confirm-rvmyth-on-sofa-behavioral-simulation-using-vivado)
     + [Sub-sub-heading](#sub-sub-heading-2)
 
 ## Day 1
@@ -101,13 +101,17 @@ This is an h3 heading
 
 This is an h1 heading
 
-### Sub-heading
+### Steps to run RISC V Core on SOFA
 
 This is an h2 heading
 
-#### Sub-sub-heading
+### Characterize RVmyth in terms of performance and area
 
 This is an h3 heading
+
+### Steps to generate rvmyth post implementation netlist
+
+###
 
 ## Table of Contents
 
