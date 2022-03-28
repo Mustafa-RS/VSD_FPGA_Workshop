@@ -595,15 +595,96 @@ This is an h1 heading
 
 ### Steps to run RISC V Core on SOFA
 
-This is an h2 heading
+SOFA-RVMyth run
+
+After cloning the SOFA repo, 
+we then go the following directory and run a make file there. 
+
+cd FPGA1212_QLSOFA_HD_PNR
+make runOpenFPGA
+
+There are some files we will need to edit though,
+run;
+vim task_simulation.conf
+In this file we need to change 2 things, 
+- openfpga_vpr_device_layour=auto
+- openfpga_vpr_route_chan_width=180
+
+We also go and change a file in an earlier directory, 
+vim generate_testbench.openfpga
+In this file we make the following changes;
+<insert pic for reference>
+
+We then go into the "arch" directory & run;
+vim vpr_arch.xml
+
+In this file on line 154, 155 & line 256, we comment them out.
+
+Now thats all done, we go back to the original directory & run make runOpenFPGA
+
+This take 5-6 mins to run, it will generate alot of outputs to the folder MIN_ROUTE_CHAN_WIDTH within core<- vpr_arch<-latest
+
+We are very interested in the log file;
+vim openfpgashell.log
 
 ### Characterize RVmyth in terms of performance and area
 
-This is an h3 heading
+Performing area analysis is quite simple
+
+run:
+vim vpr_stdout.log
+
+Searching circuit statistics, shows us that 5526 blocks have been used and below that is the rest of the statistics. 
+
+Searching for logic elements, shows us the detailed count as well as Pb usage. 
+
+
+Timing Analysis, before doing this we need to open the mythcore_test.v file. running
+vim mythcore_test.v
+
+The top module's name is core, clock is clk. so we need to make sure the sdc file we create, we define the clock as clk, with a period of 200ns. It's slow because we are doing a whole processor. 
+
+Now opening config file, task_simulation.conf (same as last time) It doesn't change this time, it stays the same. We don't need to update it again like we did the first time. 
+
+Now going into generate_testbench.openfpga
+
+We now edit the script command again, to add --sdc file as the constraints have just been defined. 
+
+< pic for reference>
+
+Now that's all done, we go back to the original directory & run the make command:
+make runOpenFPGA
+
+We can see the setup & hold timing reports. 
+We start by seeing
+- report_timing.setup.rpt - slack has been met, in 10.43 ns. 
+
+- report_timing.hold.rpt - Slack met by 0.96 ns.
 
 ### Steps to generate rvmyth post implementation netlist
+  
+Now we run the post-implementation simulation, first we need a post-implementation netlist.
+
+We add another command to the original generate_testbench.openfpga file & then run make again.
+
+Now we have a file called core_post_synthesis.v
+
+We need to write a test bench for this, in doing so we must check the modules that we need. (LUT_K/DFF/Interconnect)
+- DFF is defined differently in the primitive.v file, so we need to align them. the clock is labeled "clock", but in the primitives it "clk" we change it to "clock to make it work.
+
+Now that we are ready with our testbench & primitives file, we can run them through vivado.
+
+File->Project->New to create new project file.
+
+Then, add the sources, by clicking option or "+" icon, 
+add design sources - post-synthesis.v & primitives.v
+add simulation - testbench.v
+
+Click run simulation -> run behavioral simulation. 
 
 ### Confirm RVmyth on SOFA behavioral simulation using Vivado
+  
+Re-run through the steps on Day 3 to create post implementation netlist. Then open Vivado to run through any test bench we want to write along with the post-implementation netlist & primitives.v file as design sources.  
 
 ## Table of Contents
 
