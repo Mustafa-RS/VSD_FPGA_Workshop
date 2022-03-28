@@ -75,11 +75,11 @@ This is an h1 heading
 
 This is an h2 heading
 
-### Rvmyth – Vivado RTL to synthesis flow
+### Rvmyth Vivado RTL to synthesis flow
 
 This is an h3 heading
 
-### Rvmyth – Vivado Synthesis to bitstream
+### Rvmyth Vivado Synthesis to bitstream
 
 ## Day 4
 
