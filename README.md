@@ -16,13 +16,21 @@ FPGA - Fabric, Design and Architecture Workshop by VSD-IAT
   3. [Counter example using VPR/VTR openfpga flow](#counter-example-using-vpr-and-vtr-openfpga-flow)
     + [Sub-sub-heading](#sub-sub-heading-1)
 - [Day 3](#day-3)
-  * [Sub-heading](#sub-heading-2)
+  1. [Introduction to basic RISC-V core – rvmyth](#introduction-to-basic-risc-v-core-–-rvmyth)
+  2. [Rvmyth – Vivado RTL to synthesis flow](#)
+  3. [Rvmyth – Vivado Synthesis to bitstream](#)
     + [Sub-sub-heading](#sub-sub-heading-2)
 - [Day 4](#day-4)
-  * [Sub-heading](#sub-heading-2)
+  1. [Introduction to opensource SOFA FPGA fabric]
+  2. [Steps to run counter example on SOFA]
+  3. [Characterize counter example in terms of area and timing]
+  4. [Post-implementation netlist and simulation using SOFA]
     + [Sub-sub-heading](#sub-sub-heading-2)
 - [Day 5](#day-5)
-  * [Sub-heading](#sub-heading-2)
+  1. [Steps to run RISC-V Core - on SOFA]
+  2. [Characterize RVmyth in terms of performance and area]
+  3. [Steps to generate rvmyth post-implementation netlist]
+  4. [Confirm RVmyth on SOFA behavioral simulation using Vivado]
     + [Sub-sub-heading](#sub-sub-heading-2)
 
 ## Day 1
@@ -63,7 +71,7 @@ This is an h3 heading
 
 This is an h1 heading
 
-### Sub-heading
+### Introduction to basic RISC-V core – rvmyth
 
 This is an h2 heading
 
