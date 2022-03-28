@@ -535,15 +535,59 @@ This is an h1 heading
 
 ### Introduction to opensource SOFA FPGA fabric
 
-This is an h2 heading
+These are a series of open-source FPGA IPs using open-source Skywater 130nm PDK & OpenFPGA framework. 
+
+to do timing analysis, just like with general OpenFPGA, all we need to do is define CLK constraints on sdc file. Since SOFA automates much of the OpenFPGA scripts we just add --sdc_file "path to file".sdc in the pre-existing script. 
+
+Then we run the general command:
+make runOpenFPGA
+
+Now our reports have proper timing analysis.
 
 ### Steps to run counter example on SOFA
 
-This is an h3 heading
+SOFA counter post implementation & simulation
+
+Go to Script again where we added sdc file, now we add --gen_post_synthesis_netlist on 
+
+It will run synthesis and output a post-synthesis netlist for us.
+
+We RE-RUN:
+make runOpenFPGA
+
+We now have "up_counter_post_synthesis.v" file
+
+1. Must create test bench
+- created instance of up_counter
+- create clock and toggle it
+2. Primitives.v file, we must change "clk" to "clock" to align with the post_synthesis "clock" name.
+
+Now we can simulate the post-synthesis netlist!
+
+Open Vivado, new project. specificy the correct path
+
+add design source, select up_counter_post_synthesis.v & primitives.v
+
+add simulation source, select test_bench.v file
+
+We can open the test bench file on vivado and check to make sure everything has been defined correctly. then we can click run simulation. 
+
+We can then see the output waveform, showing the counter counting up. 
+
+We don't need to use Vivado to see this waveform and verilog simulator will suffice, but we need SOFA & OpenFPGA to run the scripts, output the post-sythesis simulation file, primitives for us to write the test bench file. 
 
 ### Characterize counter example in terms of area and timing
+  
+Going into the config directory, we then open the tast_simulation.conf file & then we can go to task directory and open the generate_testbench.openfpga. We open and edit this file, adding power and tech commands. <see pic for ref>
+
+Again we run:
+make runOpenFPGA, now we have up_counter.power file. 
+
+Opening it shows the power specs!
 
 ### Post implementation netlist and simulation using SOFA
+  
+Re-run through the steps on Day 3 to create post implementation netlist. Then open Vivado to run through any test bench we want to write along with the post-implementation netlist & primitives.v file as design sources.  
 
 ## Day 5
 
