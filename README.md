@@ -466,18 +466,6 @@ Next let's try to run implementation & open implementation design once it's comp
 We can now see the  layout showing how the logic cells have been placed for our design. Going on the netlist, we can click on Net & then select nets one by one, showing what part of the processor they have been used for. 
 
 With one net selected, we can click report timing summary under synthesis. 
-  
-### Second Attempt (Merge together with top)
-
-RVMyth Vivado
-
-set up project
-
-insert files
-
-edit test.v to remove error
-
-simulation, shows 45 like it should
 
 ### Rvmyth Vivado Synthesis to bitstream
 
