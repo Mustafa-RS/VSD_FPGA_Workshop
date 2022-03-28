@@ -16,7 +16,7 @@ FPGA - Fabric, Design and Architecture Workshop by VSD-IAT
   3. [Counter example using VPR/VTR openfpga flow](#counter-example-using-vpr-and-vtr-openfpga-flow)
     + [Sub-sub-heading](#sub-sub-heading-1)
 - [Day 3](#day-3)
-  1. [Introduction to basic RISC-V core – rvmyth](#introduction-to-basic-risc-v-core-–-rvmyth)
+  1. [Introduction to basic RISC-V core – rvmyth](#introduction-to-basic-risc-v-core-rvmyth)
   2. [Rvmyth – Vivado RTL to synthesis flow](#)
   3. [Rvmyth – Vivado Synthesis to bitstream](#)
     + [Sub-sub-heading](#sub-sub-heading-2)
@@ -71,7 +71,7 @@ This is an h3 heading
 
 This is an h1 heading
 
-### Introduction to basic RISC-V core – rvmyth
+### Introduction to basic RISC-V core rvmyth
 
 This is an h2 heading
 
