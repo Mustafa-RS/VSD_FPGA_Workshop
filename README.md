@@ -400,14 +400,135 @@ This is an h1 heading
 
 ### Introduction to basic RISC-V core rvmyth
 
-This is an h2 heading
+Introduction to RISC-V core programming on Vivado
+
+RVMyth vivado rtl-to-synthesis
+
+RVMyth is a RISC-V Processor core, and we can implement it on an FPGA as soft IP core. 
+
+mythcore_test.v designs the processor on FPGA
+
+This is a 5 stage pipelined processor
+1. Fetch - fetches instructions from instruction memory 
+
+2. First instruction goes through decoder, at the same time the second instruction is being fetched. 
+
+3. Execute after decode
+- ALU
+- Branch
+- Load
+- Jump
+
+4. Memory Access Step
+
+5. Back to register
 
 ### Rvmyth Vivado RTL to synthesis flow
+  
+We have a test.v file which serves as our test bench. It's a 1 bit counter, so essentially it goes between 0 and 1 & has delays in between changes. 
 
-This is an h3 heading
+
+Vivado project using Basys3, added mythcore_test.v as design source & test.v as simulation source. 
+
+
+Running simulation gives us a waveform. 
+
+
+
+Now we can click Open Elaborated Design under RTL Analysis. 
+
+It allows us to define the ports/package pins for the inputs (clk to W5 & reset to R2, a switch on the board)
+
+
+On Verilog file, we will delete output port, so it doesn't need to be mapped to any LED. Then reload the elaboration. DON't run Simulation right now, it will show error due to the output being deleted. 
+
+Now we don't have output port on I/O ports section. We therefore don't need to define any LEDs to act as Output, we just define input pins. 
+
+
+In order to use integrated logic analyzer, we go to IP catalogue toolbar and search ILA.  select ILA, double click. Asks us how many probes we want to add, we select 2 for reset & also output. 
+
+Under Probe ports, we have to select the width or size of the signals (probe0 is reset to it is 1 bit, 0 or 1. Probe1 is output which will be 8 bit signal.) We then clock "okay" & when the next window opens "Generate"
+
+Once we do this, there is now a .veo file in our project folder. We double click on it to view. On this file there is an instance of the ILA, we need to copy & paste this instance onto the top verilog module (mythcore_test.v)
+
+We paste it into the module core, where we declare the signals. We don't just copy and paste, we need to CONNECT this instance with the rest of our code. Change the naming of parameters! Map it using the variables clk, out & reset. 
+
+Now we can re-run synthesis, however we didnt define any constraints. We can do this by now by clicking the timing constraints wizard. It shows that we have a clk which has no defined frequency or period. We then define it as 100MHz  10ns. Clicking next & then skip to finish. Now we have a constraints.sdc file that has been created & the clk has been added.
+
+Re-running Snythesis now is the final step. 
+
+After synthesis is complete, we can click report utilization. summary shows the resources we have used. 
+
+By highlighting core, and clicking schematics we can see the whole processor's schematic!
+
+Next let's try to run implementation & open implementation design once it's complete. 
+
+We can now see the  layout showing how the logic cells have been placed for our design. Going on the netlist, we can click on Net & then select nets one by one, showing what part of the processor they have been used for. 
+
+With one net selected, we can click report timing summary under synthesis. 
+  
+### Second Attempt (Merge together with top)
+
+RVMyth Vivado
+
+set up project
+
+insert files
+
+edit test.v to remove error
+
+simulation, shows 45 like it should
 
 ### Rvmyth Vivado Synthesis to bitstream
 
+Elaborated session
+- define I/O
+- clk to pin W5 (in-built CLK)
+- reset to Pin R2 (switch)
+- We don't define outputs, instead we go to verilog file & remove the output from the module (line 194). We keep it as a reg on line 197 though. 
+
+
+After reloading elaboration, we don't run another simulation. it will cause an error because outputs dont match on the test.v file. 
+
+
+Now on elaboration we dont see output! let's run synthesis. 
+
+IP catalogue -> ILA then copy paste the instantiation.
+
+
+
+
+After that we add ILA to verilog code on Lines 205 to 211. It will probe the output signals, even though they arent defined now on the file. MAP the outputs & clock to clk in the template.
+
+
+RE-Run Synthesis
+
+
+Now we need to go to constraints wizard to add a clk with 100Hz, 10 Ns period.
+
+Re-run sythesis. 
+
+
+Run implementation after checking out the synthesis info, like timing summary & schematic of the core. 
+
+
+Once implementation is done, we open the implementation window where it shows the floor plans. 
+
+
+We can then look at Time Summary Report which shows even in worst case the constraints are being met.
+
+
+Lastly we can click generate bitstream
+
+We can click generate bitsrream, then open hardware manager. Then open target, then auto connect. 
+
+We can select the FPGA and right click program device. The ILA will work to show us the signals. 
+
+Clicking on the plus symbol under trigger setup, then we select the reset. We only want to trigger probs when reset is changed from 1 to 0. This will trigger ILA and the probes will check out the 8 bit output signal. 
+
+When you flash, nothing changes on the screen, the user then can switch the trigger reset button from low to high, still no change, now when we switch it from high to low. The ILU is triggered! 
+  
+  
 ## Day 4
 
 This is an h1 heading
