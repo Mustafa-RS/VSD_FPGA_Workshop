@@ -35,12 +35,11 @@ FPGA - Fabric, Design and Architecture Workshop by VSD-IAT
 
 ## Day 1
 
-This is an h1 heading
+The FPGA Workshop kicked off by going through the foundations of FPGA. We learned about FPGA architecture, how FPGA is different from ASIC, their applications & how to configure an FPGA using an HDL e.g. Verilog. We used Vivado Software to design one of the most popular digial circuits for beginners - a 4 bit counter. Using Vivado, we went through the general FPGA Development flow as well as Vivado GUI usage/features.  
 
 ### Introduction to FPGA
 
-History of programmable logic
-
+#### History of programmable logic
 - PLA: had arrays of logic & gates that could be programmed
 - CPLD (few gates than FPGA)
 - FPGA: Contains several large components which can be programmed
@@ -49,21 +48,13 @@ The idea behind these devices was to program & re-program digital logic circuits
 
 An FPGA is an IC which can be designed & configured by a user. In an ASIC you can design and manufacturing it once, but in FPGA you can keep redesigning. 
 
-FPGA configuration is specified by an an RTL or HDL (Verilog or VHDL)
+FPGA configuration is specified by an an RTL or HDL (Verilog or VHDL). The way it gets programmed is quite different from ASIC. It uses LUTs, FLip-flops & configurable logic blocks.
 
-The way it gets programmed is quite different from ASIC. It uses LUTs, FLip-flops & configurable logic blocks.
+#### ASIC VS FPGA
+ASIC is application specific e.g. processor. RTL -> Layout -> Sent to foundry for fabrication. The architecture cannot be changed after it is fabricated. 
+FPGA is reprogrammable. Design -> RTL -> bitstream (Configuration an FPGA understands) Bitstrea runs on an FPGA & is stored in memory incase of reset.
 
-ASIC VS FPGA
-
-ASIC is application specific e.g. processor
-RTL -> Layout -> Sent to foundry for fabrication
-I cannot be reprogrammed
-
-FPGA is reprogrammable
-Design -> RTL -> bitstream (configuration an FPGA understands. runs on FPGA)
-
-
-Applications of FPGA
+#### Applications of FPGA
 - Hardware acceleration
 - DSP
 - Device controller
@@ -72,20 +63,16 @@ Applications of FPGA
 - High performance computing
 - Aerospace
 
-FPGA Architecture
-
+#### FPGA Architecture
 Unlike on ASIC, where if we want to program an ALU for instance, we use logic gates (AND/OR/NOR) and then the gate design is converted to transistor level design to create the real circuit in fabrication. The result is the ASIC.
 
-FPGA has existing logic! we just configure it!
-It consists of configurable logic blocks (CLBs) 
+FPGA has existing logic! we just configure it! It consists of configurable logic blocks (CLBs) 
 
-CLBs contain a set of LUTs either 4 or 6 inputs, then a set of carry chain, set of MUXs or just 1, and then set of flip-flops. Each FPGAs CLB could have its own unique CLB architecture. 
+CLBs contain a set of LUTs either 4 or 6 inputs, then a set of carry chain, set of MUXs or just 1, and then set of flip-flops. Each FPGAs CLB could have its own unique CLB architecture. Using a Xilinx toolchain for instance, you would be able to program your ALU design on Verilog & it would be converted by the toolchain to convert to the Xilinx FPGA's specific CLB architecture. 
 
-Using a Xilinx toolchain for instance, you would be able to program your ALU design on Verilog & it would be converted by the toolchain to convert to the Xilinx FPGA's specific CLB architecture. 
+Programmable interconnects join the CLBs together & we also have programmable I/O which can be used by the user to send a 1 or 0 using a button/switch or electric current. 
 
-Programmable interconnects join the CLBs together & we also have programmable I/O which can be used by the user to send a 1 or 0. using button/switch or electric current. like we did in Digital Logic Class with switches. 
-
-User will define a design then it is sythesized and converted to bitstream. It is stored in the configuration memory, and every time we turn the FPGA on, it will program the bitstream to run on the CLBs. Bitstream defines the behavior of the design. It connects CLBs, interconnects, inputs/outputs. 
+Users will define a design then it is sythesized and converted to bitstream. It is stored in the configuration memory, and every time we turn the FPGA on, it will program the bitstream to run on the CLBs. Bitstream defines the behavior of the design. It connects CLBs, interconnects & inputs/outputs all together. 
 
 FPGAs also have Block RAM, Clock tiles, DSP blocks, multiplier blocks which can also be used to design/enhance our design
 
@@ -107,21 +94,19 @@ Now we are ready to run;
  - Synthesis
  - Implementation
 
-
+### Counter Verilog explanation and implementation using Vivado
 
 Vivado map pins
 
 Vivado lets us choose pins and autimatically creates the constraints file. 
 
 <see pic for reference>
-
-Theory slack
-
-
-
+  
 Vivado Synthesis
 
 Click run synthesis, then max number of jobs that will run at the same time. then hit okay. 
+  
+Vivado summary
 
 Once synthesis is completed, let's open the synthesized design. We get the following reports
 - timing summary 
@@ -129,8 +114,9 @@ Once synthesis is completed, let's open the synthesized design. We get the follo
 - power
 - etc. 
 
+### Vivado timing, power, and area measurement for counter
+  
 the Timing summary says, "No timing constraints.." because we didnt set clk frequency or delays in the constraints file!!
-
 
 Constraints to bitstream
 
@@ -145,25 +131,18 @@ We now RE-run synthesis, now the timing summary shows the that the timing constr
 Implementation step, when com
 
 Generate bitsream, when its done it will say bitsream gen is complete. 
-
-
+  
+Theory slack
+  
 Vivado timing
-
 
 Vivado slack, power, area
 
-
-Vivado summary
-
-### Counter Verilog explanation and implementation using Vivado
-
-### Vivado timing, power, and area measurement for counter
-
 ### Introduction to VIO
 
-#### Sub-sub-heading
+#### Watch the video 
 
-This is an h3 heading
+What did they say???
 
 ## Day 2
 
