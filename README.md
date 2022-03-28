@@ -21,10 +21,10 @@ FPGA - Fabric, Design and Architecture Workshop by VSD-IAT
   3. [Rvmyth – Vivado Synthesis to bitstream](#rvmyth-vivado-synthesis-to-bitstream)
     + [Sub-sub-heading](#sub-sub-heading-2)
 - [Day 4](#day-4)
-  1. [Introduction to opensource SOFA FPGA fabric]
-  2. [Steps to run counter example on SOFA]
-  3. [Characterize counter example in terms of area and timing]
-  4. [Post-implementation netlist and simulation using SOFA]
+  1. [Introduction to opensource SOFA FPGA fabric](#introduction-to-opensource-sofa-fpga-fabric)
+  2. [Steps to run counter example on SOFA](#steps-to-run-counter-example-on-sofa)
+  3. [Characterize counter example in terms of area and timing](#characterize-counter-example-in-terms-of-area-and-timing)
+  4. [Post-implementation netlist and simulation using SOFA](#post-implementation-netlist-and-simulation-using-sofa)
     + [Sub-sub-heading](#sub-sub-heading-2)
 - [Day 5](#day-5)
   1. [Steps to run RISC-V Core - on SOFA]
@@ -85,13 +85,17 @@ This is an h3 heading
 
 This is an h1 heading
 
-### Sub-heading
+### Introduction to opensource SOFA FPGA fabric
 
 This is an h2 heading
 
-#### Sub-sub-heading
+### Steps to run counter example on SOFA
 
 This is an h3 heading
+
+### Characterize counter example in terms of area and timing
+
+### Post implementation netlist and simulation using SOFA
 
 ## Day 5
 
