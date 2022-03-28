@@ -141,5 +141,5 @@ This is an h3 heading
 ### Day 5:
 1. Steps to run RISC-V Core - on SOFA
 2. Characterize RVmyth in terms of performance and area
-3. Steps to generate rvmyth post-implementation netlist
+3. Steps to generate rvmyth post implementation netlist
 4. Confirm RVmyth on SOFA behavioral simulation using Vivado
