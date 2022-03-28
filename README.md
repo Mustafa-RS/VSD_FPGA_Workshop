@@ -18,7 +18,7 @@ FPGA - Fabric, Design and Architecture Workshop by VSD-IAT
 - [Day 3](#day-3)
   1. [Introduction to basic RISC-V core – rvmyth](#introduction-to-basic-risc-v-core-rvmyth)
   2. [Rvmyth – Vivado RTL to synthesis flow](#rvmyth-vivado-rtl-to-synthesis-flow)
-  3. [Rvmyth – Vivado Synthesis to bitstream](rvmyth-vivado-synthesis-to-bitstream)
+  3. [Rvmyth – Vivado Synthesis to bitstream](#rvmyth-vivado-synthesis-to-bitstream)
     + [Sub-sub-heading](#sub-sub-heading-2)
 - [Day 4](#day-4)
   1. [Introduction to opensource SOFA FPGA fabric]
