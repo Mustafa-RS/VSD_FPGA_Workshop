@@ -39,7 +39,55 @@ This is an h1 heading
 
 ### Introduction to FPGA
 
-This is an h2 heading
+History of programmable logic
+
+- PLA: had arrays of logic & gates that could be programmed
+- CPLD (few gates than FPGA)
+- FPGA: Contains several large components which can be programmed
+
+The idea behind these devices was to program & re-program digital logic circuits. To create CUSTOMIZEABLE Hardware. And to study the area, speed & power of the circuits we design. 
+
+An FPGA is an IC which can be designed & configured by a user. In an ASIC you can design and manufacturing it once, but in FPGA you can keep redesigning. 
+
+FPGA configuration is specified by an an RTL or HDL (Verilog or VHDL)
+
+The way it gets programmed is quite different from ASIC. It uses LUTs, FLip-flops & configurable logic blocks.
+
+ASIC VS FPGA
+
+ASIC is application specific e.g. processor
+RTL -> Layout -> Sent to foundry for fabrication
+I cannot be reprogrammed
+
+FPGA is reprogrammable
+Design -> RTL -> bitstream (configuration an FPGA understands. runs on FPGA)
+
+
+Applications of FPGA
+- Hardware acceleration
+- DSP
+- Device controller
+- Embedded Systems
+- ML 
+- High performance computing
+- Aerospace
+
+FPGA Architecture
+
+Unlike on ASIC, where if we want to program an ALU for instance, we use logic gates (AND/OR/NOR) and then the gate design is converted to transistor level design to create the real circuit in fabrication. The result is the ASIC.
+
+FPGA has existing logic! we just configure it!
+It consists of configurable logic blocks (CLBs) 
+
+CLBs contain a set of LUTs either 4 or 6 inputs, then a set of carry chain, set of MUXs or just 1, and then set of flip-flops. Each FPGAs CLB could have its own unique CLB architecture. 
+
+Using a Xilinx toolchain for instance, you would be able to program your ALU design on Verilog & it would be converted by the toolchain to convert to the Xilinx FPGA's specific CLB architecture. 
+
+Programmable interconnects join the CLBs together & we also have programmable I/O which can be used by the user to send a 1 or 0. using button/switch or electric current. like we did in Digital Logic Class with switches. 
+
+User will define a design then it is sythesized and converted to bitstream. It is stored in the configuration memory, and every time we turn the FPGA on, it will program the bitstream to run on the CLBs. Bitstream defines the behavior of the design. It connects CLBs, interconnects, inputs/outputs. 
+
+FPGAs also have Block RAM, Clock tiles, DSP blocks, multiplier blocks which can also be used to design/enhance our design
 
 ### Counter example using Vivado
 
