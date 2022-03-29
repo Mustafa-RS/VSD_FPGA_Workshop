@@ -388,38 +388,25 @@ This is a 5 stage pipelined processor
 We have a test.v file which serves as our test bench. It's a 1 bit counter, so essentially it goes between 0 and 1 & has delays in between changes. 
 
 
-Vivado project using Basys3, added mythcore_test.v as design source & test.v as simulation source. 
+We now open Vivado project using Basys3, add mythcore_test.v as design source & add test.v as simulation source. Running simulation gives us a waveform. 
 
-
-Running simulation gives us a waveform. 
-
-
-
-Now we can click Open Elaborated Design under RTL Analysis. 
-
-It allows us to define the ports/package pins for the inputs (clk to W5 & reset to R2, a switch on the board)
-
+Now we can click Open Elaborated Design under RTL Analysis. It allows us to define the ports/package pins for the inputs (clk to W5 & reset to R2, a switch on the board)
 
 On Verilog file, we will delete output port, so it doesn't need to be mapped to any LED. Then reload the elaboration. DON't run Simulation right now, it will show error due to the output being deleted. 
 
 Now we don't have output port on I/O ports section. We therefore don't need to define any LEDs to act as Output, we just define input pins. 
 
-
 In order to use integrated logic analyzer, we go to IP catalogue toolbar and search ILA.  select ILA, double click. Asks us how many probes we want to add, we select 2 for reset & also output. 
 
 Under Probe ports, we have to select the width or size of the signals (probe0 is reset to it is 1 bit, 0 or 1. Probe1 is output which will be 8 bit signal.) We then clock "okay" & when the next window opens "Generate"
 
-Once we do this, there is now a .veo file in our project folder. We double click on it to view. On this file there is an instance of the ILA, we need to copy & paste this instance onto the top verilog module (mythcore_test.v)
-
-We paste it into the module core, where we declare the signals. We don't just copy and paste, we need to CONNECT this instance with the rest of our code. Change the naming of parameters! Map it using the variables clk, out & reset. 
+Once we do this, there is now a .veo file in our project folder. We double click on it to view. On this file there is an instance of the ILA, we need to copy & paste this instance onto the top verilog module (mythcore_test.v). We paste it into the module core, where we declare the signals. We don't just copy and paste, we need to CONNECT this instance with the rest of our code. Change the naming of parameters! Map it using the variables clk, out & reset. 
 
 Now we can re-run synthesis, however we didnt define any constraints. We can do this by now by clicking the timing constraints wizard. It shows that we have a clk which has no defined frequency or period. We then define it as 100MHz  10ns. Clicking next & then skip to finish. Now we have a constraints.sdc file that has been created & the clk has been added.
 
 Re-running Snythesis now is the final step. 
 
-After synthesis is complete, we can click report utilization. summary shows the resources we have used. 
-
-By highlighting core, and clicking schematics we can see the whole processor's schematic!
+After synthesis is complete, we can click report utilization. summary shows the resources we have used. By highlighting core, and clicking schematics we can see the whole processor's schematic!
 
 Next let's try to run implementation & open implementation design once it's complete. 
 
@@ -435,36 +422,26 @@ Elaborated session
 - reset to Pin R2 (switch)
 - We don't define outputs, instead we go to verilog file & remove the output from the module (line 194). We keep it as a reg on line 197 though. 
 
-
-After reloading elaboration, we don't run another simulation. it will cause an error because outputs dont match on the test.v file. 
-
+After reloading elaboration, we don't run another simulation. it will cause an error because the outputs have been removed, but they are still on the test.v file. 
 
 Now on elaboration we dont see output! let's run synthesis. 
 
-IP catalogue -> ILA then copy paste the instantiation.
-
-
-
+#### ILA - Integrated Logic Analyzer
+IP catalogue -> ILA, we now have an instantiation of an ILA template, we must then copy paste the instantiation onto our verilog code.
 
 After that we add ILA to verilog code on Lines 205 to 211. It will probe the output signals, even though they arent defined now on the file. MAP the outputs & clock to clk in the template.
 
-
 RE-Run Synthesis
-
 
 Now we need to go to constraints wizard to add a clk with 100Hz, 10 Ns period.
 
-Re-run sythesis. 
-
+Re-run Synthesis and now we have accurate timing reports. 
 
 Run implementation after checking out the synthesis info, like timing summary & schematic of the core. 
 
-
 Once implementation is done, we open the implementation window where it shows the floor plans. 
 
-
 We can then look at Time Summary Report which shows even in worst case the constraints are being met.
-
 
 Lastly we can click generate bitstream
 
@@ -485,7 +462,7 @@ On the fourth day of the FPGA workshop, we learned about SOFA an FPGA fabric mad
 
 These are a series of open-source FPGA IPs using open-source Skywater 130nm PDK & OpenFPGA framework. 
 
-to do timing analysis, just like with general OpenFPGA, all we need to do is define CLK constraints on sdc file. Since SOFA automates much of the OpenFPGA scripts we just add --sdc_file "path to file".sdc in the pre-existing script. 
+To do timing analysis, just like with general OpenFPGA, all we need to do is define CLK constraints on sdc file. Since SOFA automates much of the OpenFPGA scripts we just add --sdc_file "path to file".sdc in the pre-existing script. 
 
 Then we run the general command:
 make runOpenFPGA
@@ -512,15 +489,9 @@ We now have "up_counter_post_synthesis.v" file
 
 Now we can simulate the post-synthesis netlist!
 
-Open Vivado, new project. specificy the correct path
+Open Vivado, new project. specificy the correct path, add design source, select up_counter_post_synthesis.v & primitives.v, add simulation source, select test_bench.v file.
 
-add design source, select up_counter_post_synthesis.v & primitives.v
-
-add simulation source, select test_bench.v file
-
-We can open the test bench file on vivado and check to make sure everything has been defined correctly. then we can click run simulation. 
-
-We can then see the output waveform, showing the counter counting up. 
+We can open the test bench file on vivado and check to make sure everything has been defined correctly. then we can click run simulation. We can then see the output waveform, showing the counter counting up. 
 
 We don't need to use Vivado to see this waveform and verilog simulator will suffice, but we need SOFA & OpenFPGA to run the scripts, output the post-sythesis simulation file, primitives for us to write the test bench file. 
 
@@ -545,9 +516,7 @@ On the fifth day of the FPGA workshop, we once again used a SOFA FPGA architectu
 
 SOFA-RVMyth run
 
-After cloning the SOFA repo, 
-we then go the following directory and run a make file there. 
-
+After cloning the SOFA repo, we then go the following directory and run a make file there. 
 cd FPGA1212_QLSOFA_HD_PNR
 make runOpenFPGA
 
@@ -565,9 +534,7 @@ In this file we make the following changes;
 
 We then go into the "arch" directory & run;
 vim vpr_arch.xml
-
-In this file on line 154, 155 & line 256, we comment them out.
-
+In this file we comment them out line 154, 155 & line 256.
 Now thats all done, we go back to the original directory & run make runOpenFPGA
 
 This take 5-6 mins to run, it will generate alot of outputs to the folder MIN_ROUTE_CHAN_WIDTH within core<- vpr_arch<-latest
@@ -583,9 +550,7 @@ run:
 vim vpr_stdout.log
 
 Searching circuit statistics, shows us that 5526 blocks have been used and below that is the rest of the statistics. 
-
 Searching for logic elements, shows us the detailed count as well as Pb usage. 
-
 
 Timing Analysis, before doing this we need to open the mythcore_test.v file. running
 vim mythcore_test.v
