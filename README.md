@@ -634,33 +634,6 @@ Click run simulation -> run behavioral simulation.
   
 Re-run through the steps on Day 3 to create post implementation netlist. Then open Vivado to run through any test bench we want to write along with the post-implementation netlist & primitives.v file as design sources.  
 
-## Table of Contents
-
-### Day 1
-1. Introduction to FPGA
-2. Counter example using Vivado
-3. Counter Verilog explanation and implementation using Vivado
-4. Vivado timing, power, and area measurement for counter
-5. Introduction to VIO
-
-### Day 2: 
-1. Introduction to OpenFPGA and VTR (verilog-to-routing)
-2. Introduction to VPR (versatile-place-and-route) using basic Earch fabric
-3. Counter example using VPR/VTR openfpga flow
-
-### Day 3:
-1. Introduction to basic RISC-V core – rvmyth
-2. Rvmyth – Vivado RTL to synthesis flow
-3. Rvmyth – Vivado Synthesis to bitstream
-
-### Day 4:
-1. Introduction to opensource SOFA FPGA fabric
-2. Steps to run counter example on SOFA
-3. Characterize counter example in terms of area and timing
-4. Post-implementation netlist and simulation using SOFA
-
-### Day 5:
-1. Steps to run RISC-V Core - on SOFA
-2. Characterize RVmyth in terms of performance and area
-3. Steps to generate rvmyth post implementation netlist
-4. Confirm RVmyth on SOFA behavioral simulation using Vivado
+# Acknowledgements
+  
+Thank you to VSD-IAT for providing such a thorough & up to date FPGA workshop. I am very confident the knowledge I have picked up in the last week will directly help me in my role as project manager at Rapid Silicon. This was also my first experience writing a github report & I hope to improve this draft once I am more familiar with the tool :)
