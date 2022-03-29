@@ -356,7 +356,7 @@ To check area specs, we can check the log file output with the VPR & it shows ar
 
 ## Day 3
 
-This is an h1 heading
+The third day of the FPGA Workshop focused on demonstrating how a RISC-V processor core can be run as a digital circuit within an FPGA. We used Vivado & ran through all the FPGA design steps within the software in order to implement the RISC-V processor on our Baysy3 FPGA. Since many students like myself didn't have the actual board on Vivado we utilized an ILA to replace the output of our design which was originally meant for the physical FPGA pins.  
 
 ### Introduction to basic RISC-V core rvmyth
 
@@ -479,7 +479,7 @@ When you flash, nothing changes on the screen, the user then can switch the trig
   
 ## Day 4
 
-This is an h1 heading
+On the fourth day of the FPGA workshop, we learned about SOFA an FPGA fabric made using OpenFPGA. We ran through the VTR flow within OpenFPGA to build a SOFA FPGA simulation. Later we leveraged Vivado to run the simulation once we had all the files prepared to support a test bench on Vivado. 
 
 ### Introduction to opensource SOFA FPGA fabric
 
@@ -539,7 +539,7 @@ Re-run through the steps on Day 3 to create post implementation netlist. Then op
 
 ## Day 5
 
-This is an h1 heading
+On the fifth day of the FPGA workshop, we once again used a SOFA FPGA architecture, but this time instead of running a simple counter, we used the SOFA architecture to run a RISC-V processor core, like the Baysy3 on Day3. The steps for day 5 were a combination of day 4's steps for implementing SOFA architecture & a design of our choice using OpenFPGA & day 3's steps for simulation on Vivado of a RISC-V Core. 
 
 ### Steps to run RISC V Core on SOFA
 
